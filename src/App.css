@@ -106,21 +106,22 @@ button:hover {
 .task-text span {
   font-size: 20px;
 }
+
 .edit-task {
   display: flex;
-}
-.edit-buttons {
-  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-/* Media Query for Small Screens */
+.edit-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Media Query for Small Screens (max-width: 720px) */
 @media (max-width: 720px) {
-  body{
-    padding: 10px;
-  }
   .container {
-    margin: 10px;
-    background-color: green;
     width: 100%;
     padding: 10px;
   }
@@ -169,5 +170,73 @@ button:hover {
     padding: 10px;
     width: 100%;
     text-align: center;
+  }
+}
+
+/* Media Query for Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    width: 90%; /* Reduce width for mobile screens */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+  }
+
+  .input-field input {
+    /* width: 100%; */
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .input-field button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .task-item input {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .task-item button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .task-text {
+    
+    padding: 10px;
+  }
+
+  .task-text span {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+ 
+  .edit-task {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .edit-buttons {
+    flex-direction: row;
+    width: auto;
+    justify-content: space-between;
+  }
+
+  .task-item button {
+    padding: 10px;
+    width: auto; /* Let buttons adjust their width */
   }
 }
