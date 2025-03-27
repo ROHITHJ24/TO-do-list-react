@@ -115,7 +115,11 @@ button:hover {
 
 /* Media Query for Small Screens */
 @media (max-width: 720px) {
+  body{
+    padding: 10px;
+  }
   .container {
+    margin: 10px;
     width: 100%;
     padding: 10px;
   }
