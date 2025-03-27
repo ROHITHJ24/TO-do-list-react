@@ -1,0 +1,122 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  color: white;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #333; 
+  border-radius: 10px; 
+  font-family: reem kufi ,sans-serif;
+}
+
+.to-do-list {
+  text-align: center;
+}
+h1{
+  color: white;
+}
+.input-field {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  padding: 10px;
+  outline: none;
+  border-radius: 10px;
+}
+
+.input-field button {
+  padding: 8px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 10px; 
+}
+
+.input-field button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-item input {
+  width: 70%;
+  padding: 8px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  border-radius: 10px; 
+}
+
+.task-item button {
+ 
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; 
+}
+
+.task-item button:hover {
+  background-color: #e53935;
+}
+
+button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.task-text{
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-text span{
+  font-size: 20px;
+}
+.edit-task{
+  display: flex;
+}
+.edit-buttons{
+  display: flex;
+}
+
+@media (max-width:720px){
+  .container{
+    width: 200px;
+  }
+}
