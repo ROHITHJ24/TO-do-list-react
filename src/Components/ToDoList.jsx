@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
 const ToDoList = () => {
-  const [tasks, setTasks] = useState([]); 
+  const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
   const [editingTask, setEditingTask] = useState(null);
-  const [editedText, setEditedText] = useState(""); 
-  
+  const [editedText, setEditedText] = useState("");
+
   function inputChange(event) {
     setNewTask(event.target.value);
   }
 
-  
+
   function addTask() {
     if (newTask.trim()) {
       const newTaskObj = {
@@ -18,14 +18,14 @@ const ToDoList = () => {
         text: newTask.trim(),
       };
       setTasks([...tasks, newTaskObj]);
-      setNewTask(""); 
+      setNewTask("");
     }
   }
 
- 
+
   function startEditingTask(task) {
     setEditingTask(task.id);
-    setEditedText(task.text); 
+    setEditedText(task.text);
   }
 
   function confirmEdit(id) {
@@ -33,16 +33,16 @@ const ToDoList = () => {
       task.id === id ? { ...task, text: editedText } : task
     );
     setTasks(updatedTasks);
-    setEditingTask(null); 
+    setEditingTask(null);
   }
 
 
   function cancelEdit() {
     setEditingTask(null);
-    setEditedText(""); 
+    setEditedText("");
   }
 
-  
+
   function deleteTask(id) {
     const updatedTasks = tasks.filter(task => task.id !== id);
     setTasks(updatedTasks);
@@ -74,8 +74,8 @@ const ToDoList = () => {
                   />
                   <div className='edit-buttons'>
 
-                  <button onClick={() => confirmEdit(task.id)}>Confirm</button>
-                  <button onClick={cancelEdit}>Cancel</button>
+                    <button onClick={() => confirmEdit(task.id)}>Confirm</button>
+                    <button onClick={cancelEdit}>Cancel</button>
                   </div>
                 </div>
               ) : (
